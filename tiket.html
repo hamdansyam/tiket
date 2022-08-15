@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function tiket()
+    {
+    var hasiltujuan = (ff.OpsiTujuan.value);
+    var jt = parseFloat(ff.jumlahtiket.value);
+    var ht=0.0;
+    var sub=0.0;
+    if (hasiltujuan == "Jakarta") {ht = 10000;}
+    else{ht=20000;}
+    var sub=ht*jt;
+    if (ff.member.checked==true) {disc=0.10*sub;} else {disc=0*sub;}
+    var total = sub-disc;
+    ff.hasilnya.value=total;
+    }
+</script>
+<body>
+<form name="ff">
+    <pre>
+
+Tujuan <select name="OpsiTujuan" id="">
+        <option value="Jakarta">Jakarta</option>
+        <option value="Bandung">Bandung</option>
+        <option value="Semarang">Semarang</option>
+        </select>
+jumlah tiket <input type="text" name="jumlahtiket" id="">
+member <input type="radio" name="member" id=""> Ya
+<input type="button" name="cek" value="cek" onclick="tiket()">
+<input type="text" name="hasilnya" id="">
+</pre>
+</form>
+</body>
+</html>
