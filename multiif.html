@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function nilai()
+    {
+        var ip = parseFloat(ff.ffip.value);
+        var predikat = "";
+        var kategori = "";
+        if ((ip>79) && (ip<=100)) {predikat="A"; kategori="Sangat Bagus";}
+        else if ((ip>70) && (ip<=79)) {predikat="B"; kategori="Bagus Aja";}
+        else {predikat="cukup"; kategori="C"}
+        ff.hasilnya.value="predikat : " +predikat+ " & kategori : "+kategori;
+    }
+</script>
+<body>
+    <form name="ff">
+    <pre>
+    <input type="text" name="ffip" id="">
+    <input type="button" name="" value="ok" onclick="nilai()">
+    <textarea name="hasilnya" id="" cols="30" rows="10"></textarea>
+    </pre>
+    </form>
+</body>
+</html>
